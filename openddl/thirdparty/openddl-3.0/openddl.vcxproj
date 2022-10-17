@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\TSArray.h" />
+    <ClInclude Include="include\TSBasic.h" />
+    <ClInclude Include="include\TSData.h" />
+    <ClInclude Include="include\TSHalf.h" />
+    <ClInclude Include="include\TSList.h" />
+    <ClInclude Include="include\TSMap.h" />
+    <ClInclude Include="include\TSMath.h" />
+    <ClInclude Include="include\TSOpenDDL.h" />
+    <ClInclude Include="include\TSPlatform.h" />
+    <ClInclude Include="include\TSSimd.h" />
+    <ClInclude Include="include\TSString.h" />
+    <ClInclude Include="include\TSText.h" />
+    <ClInclude Include="include\TSTools.h" />
+    <ClInclude Include="include\TSTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TSData.cpp" />
+    <ClCompile Include="src\TSHalf.cpp" />
+    <ClCompile Include="src\TSList.cpp" />
+    <ClCompile Include="src\TSMap.cpp" />
+    <ClCompile Include="src\TSMath.cpp" />
+    <ClCompile Include="src\TSOpenDDL.cpp" />
+    <ClCompile Include="src\TSString.cpp" />
+    <ClCompile Include="src\TSText.cpp" />
+    <ClCompile Include="src\TSTools.cpp" />
+    <ClCompile Include="src\TSTree.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{41916EAB-A0CE-47E7-992C-2AE0F3D53ED4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpenDDL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <CompileAsManaged>false</CompileAsManaged>
+      <PreprocessorDefinitions>TERATHON_EXPORT;TERATHON_DEBUG;_DEBUG;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <CompileAsManaged>false</CompileAsManaged>
+      <PreprocessorDefinitions>TERATHON_EXPORT;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

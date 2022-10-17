@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{15360dd2-8930-4086-bcbd-e8040a83741a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{422950b2-0779-4390-9c90-a6900aac6258}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\TSArray.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSBasic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSHalf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSList.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSMap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSOpenDDL.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSPlatform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSSimd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSString.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSText.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSTools.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TSTree.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TSData.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSHalf.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSList.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSMap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSMath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSOpenDDL.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSString.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSText.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSTools.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TSTree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
